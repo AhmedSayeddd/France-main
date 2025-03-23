@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <!-- box icon -->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+    <!-- remix icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" />
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=M+PLUS+Rounded+1c&display=swap"
+        rel="stylesheet">
+
+    <title>Lill</title>
+</head>
+
+<body>
+
+    <header>
+        <a href="#" class="logo"><img src="img/logo.png"></a>
+        <ul class="navlist">
+            <a href="#">Home</a>
+            <a href="index.html">France</a>
+            <a href="#destination">Destination</a>
+            <a href="#"><i class="bx bx-user"></i> Login</a>
+        </ul>
+
+        <div class="bx bx-menu" id="menu-icon"></div>
+    </header>
+
+    <section class="home" id="home">
+        <div class="home-text">
+            <h1>Lill</h1>
+            <p>Experience the magic of Nice where history, art, and romance come alive!<br />Vivez la magie de Nice,
+                où l'histoire, l'art et la romance prennent vie !</p>
+            <div class="home-btn">
+                <a href="index.html#about" class="btn-second">Gide</a>
+            </div>
+            <div class="home-contain">
+                <div class="h-row">
+                    <div class="h-img">
+                        <img src="img/h1.jpg">
+                    </div>
+                    <h6>Eiffel Tower</h6>
+                </div>
+
+                <div class="h-row">
+                    <div class="h-img">
+                        <img src="img/h2.jpg">
+                    </div>
+                    <h6>Palace of Versailles</h6>
+                </div>
+
+                <div class="h-row">
+                    <div class="h-img">
+                        <img src="img/h3.jpg">
+                    </div>
+                    <h6>Louvre Museum</h6>
+                </div>
+
+                <div class="h-row">
+                    <div class="h-img">
+                        <img src="img/h4.jpg">
+                    </div>
+                    <h6>Notre-Dame de Paris</h6>
+                </div>
+
+                <div class="h-row">
+                    <div class="h-img">
+                        <img src="img/h5.jpg">
+                    </div>
+                    <h6>Mont Saint-Michel</h6>
+                </div>
+            </div>
+
+            <div class="arrow">
+                <a href="#"><i class="ri-play-line"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <section class="restaurants" id="restaurants">
+        <div class="title-head">
+            <h6>Tasting with a different taste</h6>
+            <h1>Discover the French food culture</h1>
+        </div>
+        <div class="container">
+            <div class="slider">
+                <div class="title">
+                    Restaurants and cafes
+                </div>
+                <div class="form">
+                    <div class="item">
+                        <div class="content">
+                            <img src="img/restaurant.png" alt="">
+                            <div class="des">
+                                <button class="btn-brand openModal" data-modal="modal1">Place name</button>
+                                <button class="btn-rate openModalrate" id="openModal">Rate</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="content">
+                            <img src="img/restaurant.png" alt="">
+                            <div class="des">
+                                <button class="btn-brand openModal" data-modal="modal2">Place name</button>
+                                <button class="btn-rate openModalrate" id="openModal">Rate</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="content">
+                            <img src="img/restaurant.png" alt="">
+                            <div class="des">
+                                <button class="btn-brand openModal" data-modal="modal3">Place name</button>
+                                <button class="btn-rate openModalrate" id="openModal">Rate</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="content">
+                            <img src="img/restaurant.png" alt="">
+                            <div class="des">
+                                <button class="btn-brand openModal" data-modal="modal4">Place name</button>
+                                <button class="btn-rate openModalrate" id="openModal">Rate</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="content">
+                            <img src="img/restaurant.png" alt="">
+                            <div class="des">
+                                <button class="btn-brand openModal" data-modal="modal5">Place name</button>
+                                <button class="btn-rate openModalrate" id="openModal">Rate</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="content">
+                            <img src="img/restaurant.png" alt="">
+                            <div class="des">
+                                <button class="btn-brand openModal" data-modal="modal6">Place name</button>
+                                <button class="btn-rate openModalrate" id="openModal">Rate</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="content">
+                            <img src="img/restaurant.png" alt="">
+                            <div class="des">
+                                <button class="btn-brand openModal" data-modal="modal7">Place name</button>
+                                <button class="btn-rate openModalrate" id="openModal">Rate</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="tourism" id="tourism">
+        <div class="title-head">
+            <h6>Places that tell stories</h6>
+            <h1>What you can only find in Nice</h1>
+        </div>
+        <div class="container">
+            <div class="slider">
+                <div class="title">
+                    Tourist places
+                </div>
+                <div class="form">
+                    <div class="item">
+                        <div class="content">
+                            <img src="img/tourism.png" alt="">
+                            <div class="des">
+                                <button class="btn-brand openModal" data-modal="modal8">Place name</button>
+                                <button class="btn-rate openModalrate" id="openModal">Rate</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="content">
+                            <img src="img/tourism.png" alt="">
+                            <div class="des">
+                                <button class="btn-brand openModal" data-modal="modal9">Place name</button>
+                                <button class="btn-rate openModalrate" id="openModal">Rate</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="content">
+                            <img src="img/tourism.png" alt="">
+                            <div class="des">
+                                <button class="btn-brand openModal" data-modal="modal10">Place name</button>
+                                <button class="btn-rate openModalrate" id="openModal">Rate</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="content">
+                            <img src="img/tourism.png" alt="">
+                            <div class="des">
+                                <button class="btn-brand openModal" data-modal="modal11">Place name</button>
+                                <button class="btn-rate openModalrate" id="openModal">Rate</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="content">
+                            <img src="img/tourism.png" alt="">
+                            <div class="des">
+                                <button class="btn-brand openModal" data-modal="modal12">Place name</button>
+                                <button class="btn-rate openModalrate" id="openModal">Rate</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="content">
+                            <img src="img/tourism.png" alt="">
+                            <div class="des">
+                                <button class="btn-brand openModal" data-modal="modal13">Place name</button>
+                                <button class="btn-rate openModalrate" id="openModal">Rate</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="content">
+                            <img src="img/tourism.png" alt="">
+                            <div class="des">
+                                <button class="btn-brand openModal" data-modal="modal14">Place name</button>
+                                <button class="btn-rate openModalrate" id="openModal">Rate</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="hotel" id="hotel">
+        <div class="title-head">
+            <h6>For your convenience</h6>
+            <h1>Get to know the most luxurious hotels</h1>
+        </div>
+        <div class="container">
+            <div class="slider">
+                <div class="title">
+                    Hotels
+                </div>
+                <div class="form">
+                    <div class="item">
+                        <div class="content">
+                            <img src="img/hotel.png" alt="">
+                            <div class="des">
+                                <button class="btn-brand openModal" data-modal="modal15">Place name</button>
+                                <button class="btn-rate openModalrate" id="openModal">Rate</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="content">
+                            <img src="img/hotel.png" alt="">
+                            <div class="des">
+                                <button class="btn-brand openModal" data-modal="modal16">Place name</button>
+                                <button class="btn-rate openModalrate" id="openModal">Rate</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="content">
+                            <img src="img/hotel.png" alt="">
+                            <div class="des">
+                                <button class="btn-brand openModal" data-modal="modal17">Place name</button>
+                                <button class="btn-rate openModalrate" id="openModal">Rate</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="content">
+                            <img src="img/hotel.png" alt="">
+                            <div class="des">
+                                <button class="btn-brand openModal" data-modal="modal18">Place name</button>
+                                <button class="btn-rate openModalrate" id="openModal">Rate</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="content">
+                            <img src="img/hotel.png" alt="">
+                            <div class="des">
+                                <button class="btn-brand openModal" data-modal="modal19">Place name</button>
+                                <button class="btn-rate openModalrate" id="openModal">Rate</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="content">
+                            <img src="img/hotel.png" alt="">
+                            <div class="des">
+                                <button class="btn-brand openModal" data-modal="modal20">Place name</button>
+                                <button class="btn-rate openModalrate" id="openModal">Rate</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="content">
+                            <img src="img/hotel.png" alt="">
+                            <div class="des">
+                                <button class="btn-brand openModal" data-modal="modal21">Place name</button>
+                                <button class="btn-rate openModalrate" id="openModal">Rate</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- النافذة المنبثقة للتقييم -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Your Rating</h2>
+
+            <!-- نظام التقييم بالنجوم -->
+            <div class="rating">
+                <input value="5" name="rate" id="star5" type="radio">
+                <label title="text" for="star5"></label>
+                <input value="4" name="rate" id="star4" type="radio">
+                <label title="text" for="star4"></label>
+                <input value="3" name="rate" id="star3" type="radio" checked="">
+                <label title="text" for="star3"></label>
+                <input value="2" name="rate" id="star2" type="radio">
+                <label title="text" for="star2"></label>
+                <input value="1" name="rate" id="star1" type="radio">
+                <label title="text" for="star1"></label>
+            </div>
+
+            <!-- حقل إدخال التقييم -->
+            <textarea id="reviewText" placeholder="Write your rating here..."></textarea>
+
+            <!-- زر الإرسال -->
+            <button id="submitReview" class="btn">Submit</button>
+        </div>
+    </div>
+
+    <!-- 21 نافذة منبثقة مختلفة -->
+    <div class="modals-container">
+        <div id="modal1" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Title</h2>
+                <p>Description</p>
+                <button class="location-btn" onclick="openLocation('https://maps.google.com')">Location</button>
+                <button class="call-btn" onclick="callNumber('123456789')">Call Now</button>
+            </div>
+        </div>
+
+        <div id="modal2" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Title</h2>
+                <p>Description</p>
+                <button class="location-btn" onclick="openLocation('https://maps.google.com')">Location</button>
+                <button class="call-btn" onclick="callNumber('123456789')">Call Now</button>
+            </div>
+        </div>
+
+        <div id="modal3" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Title</h2>
+                <p>Description</p>
+                <button class="location-btn" onclick="openLocation('https://maps.google.com')">Location</button>
+                <button class="call-btn" onclick="callNumber('123456789')">Call Now</button>
+            </div>
+        </div>
+
+        <div id="modal4" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Title</h2>
+                <p>Description</p>
+                <button class="location-btn" onclick="openLocation('https://maps.google.com')">Location</button>
+                <button class="call-btn" onclick="callNumber('123456789')">Call Now</button>
+            </div>
+        </div>
+
+        <div id="modal5" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Title</h2>
+                <p>Description</p>
+                <button class="location-btn" onclick="openLocation('https://maps.google.com')">Location</button>
+                <button class="call-btn" onclick="callNumber('123456789')">Call Now</button>
+            </div>
+        </div>
+
+        <div id="modal6" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Title</h2>
+                <p>Description</p>
+                <button class="location-btn" onclick="openLocation('https://maps.google.com')">Location</button>
+                <button class="call-btn" onclick="callNumber('123456789')">Call Now</button>
+            </div>
+        </div>
+
+        <div id="modal7" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Title</h2>
+                <p>Description</p>
+                <button class="location-btn" onclick="openLocation('https://maps.google.com')">Location</button>
+                <button class="call-btn" onclick="callNumber('123456789')">Call Now</button>
+            </div>
+        </div>
+
+        <div id="modal8" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Title</h2>
+                <p>Description</p>
+                <button class="location-btn" onclick="openLocation('https://maps.google.com')">Location</button>
+                <button class="call-btn" onclick="callNumber('123456789')">Call Now</button>
+            </div>
+        </div>
+
+        <div id="modal9" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Title</h2>
+                <p>Description</p>
+                <button class="location-btn" onclick="openLocation('https://maps.google.com')">Location</button>
+                <button class="call-btn" onclick="callNumber('123456789')">Call Now</button>
+            </div>
+        </div>
+
+        <div id="modal10" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Title</h2>
+                <p>Description</p>
+                <button class="location-btn" onclick="openLocation('https://maps.google.com')">Location</button>
+                <button class="call-btn" onclick="callNumber('123456789')">Call Now</button>
+            </div>
+        </div>
+
+        <div id="modal11" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Title</h2>
+                <p>Description</p>
+                <button class="location-btn" onclick="openLocation('https://maps.google.com')">Location</button>
+                <button class="call-btn" onclick="callNumber('123456789')">Call Now</button>
+            </div>
+        </div>
+
+        <div id="modal12" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Title</h2>
+                <p>Description</p>
+                <button class="location-btn" onclick="openLocation('https://maps.google.com')">Location</button>
+                <button class="call-btn" onclick="callNumber('123456789')">Call Now</button>
+            </div>
+        </div>
+
+        <div id="modal13" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Title</h2>
+                <p>Description</p>
+                <button class="location-btn" onclick="openLocation('https://maps.google.com')">Location</button>
+                <button class="call-btn" onclick="callNumber('123456789')">Call Now</button>
+            </div>
+        </div>
+
+        <div id="modal14" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Title</h2>
+                <p>Description</p>
+                <button class="location-btn" onclick="openLocation('https://maps.google.com')">Location</button>
+                <button class="call-btn" onclick="callNumber('123456789')">Call Now</button>
+            </div>
+        </div>
+
+        <div id="modal15" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Title</h2>
+                <p>Description</p>
+                <button class="location-btn" onclick="openLocation('https://maps.google.com')">Location</button>
+                <button class="call-btn" onclick="callNumber('123456789')">Call Now</button>
+            </div>
+        </div>
+
+        <div id="modal16" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Title</h2>
+                <p>Description</p>
+                <button class="location-btn" onclick="openLocation('https://maps.google.com')">Location</button>
+                <button class="call-btn" onclick="callNumber('123456789')">Call Now</button>
+            </div>
+        </div>
+
+        <div id="modal17" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Title</h2>
+                <p>Description</p>
+                <button class="location-btn" onclick="openLocation('https://maps.google.com')">Location</button>
+                <button class="call-btn" onclick="callNumber('123456789')">Call Now</button>
+            </div>
+        </div>
+
+        <div id="modal18" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Title</h2>
+                <p>Description</p>
+                <button class="location-btn" onclick="openLocation('https://maps.google.com')">Location</button>
+                <button class="call-btn" onclick="callNumber('123456789')">Call Now</button>
+            </div>
+        </div>
+
+        <div id="modal19" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Title</h2>
+                <p>Description</p>
+                <button class="location-btn" onclick="openLocation('https://maps.google.com')">Location</button>
+                <button class="call-btn" onclick="callNumber('123456789')">Call Now</button>
+            </div>
+        </div>
+
+        <div id="modal20" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Title</h2>
+                <p>Description</p>
+                <button class="location-btn" onclick="openLocation('https://maps.google.com')">Location</button>
+                <button class="call-btn" onclick="callNumber('123456789')">Call Now</button>
+            </div>
+        </div>
+
+        <div id="modal21" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Title</h2>
+                <p>Description</p>
+                <button class="location-btn" onclick="openLocation('https://maps.google.com')">Location</button>
+                <button class="call-btn" onclick="callNumber('123456789')">Call Now</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy;2025 Dalilak</p>
+    </footer>
+
+
+
+    <script src="js/france-script.js"></script>
+</body>
+
+</html>

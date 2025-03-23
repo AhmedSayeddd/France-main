@@ -1,0 +1,1007 @@
+/* تعيين القيم الافتراضية لجميع العناصر */
+* {
+    padding: 0; /* إزالة التباعد الداخلي */
+    margin: 0; /* إزالة التباعد الخارجي */
+    box-sizing: border-box; /* ضبط حجم الصندوق ليشمل الحدود والتعبئة */
+    text-decoration: none; /* إزالة تأثير النصوص مثل التسطير */
+    list-style: none; /* إزالة أنماط القوائم */
+    scroll-behavior: smooth; /* جعل التمرير سلسًا */
+    font-family: "Cairo", sans-serif; /* تحديد الخط الأساسي */
+}
+
+/* تحديد القيم الافتراضية باستخدام :root */
+:root {
+    --bg-color: #ffffff; /* لون الخلفية */
+    --text-color: #041126; /* لون النص */
+    --main-color: #ef4444; /* اللون الأساسي */
+    --second-color: #94a3b8; /* اللون الثانوي */
+    --other-color: #ffffffb3; /* لون إضافي */
+    --border-color: #e5e7eb; /* لون الحدود */
+
+    --h1-font: 4.7rem; /* حجم خط العناوين H1 */
+    --h2-font: 3.2rem; /* حجم خط العناوين H2 */
+    --p-font: 1.1rem; /* حجم خط الفقرات */
+}
+
+/* ضبط أنماط الصفحة العامة */
+body {
+    background-color: var(--bg-color); /* تعيين لون الخلفية */
+    color: var(--text-color); /* تعيين لون النص */
+}
+
+
+
+
+
+/* بداية تنسيق الهيدر */
+header {
+    position: fixed; /* جعل الهيدر ثابتًا في الأعلى */
+    z-index: 1000; /* تحديد الأولوية في الطبقات */
+    width: 100%; /* جعله يمتد على عرض الصفحة بالكامل */
+    top: 0; /* تثبيت الهيدر في أعلى الصفحة */
+    right: 0; /* محاذاة إلى اليمين */
+    display: flex; /* استخدام flexbox لترتيب العناصر */
+    align-items: center; /* محاذاة العناصر عموديًا */
+    justify-content: space-between; /* توزيع العناصر بالتساوي */
+    background: transparent; /* جعل الخلفية شفافة */
+    padding: 30px 15%; /* تحديد التباعد الداخلي */
+    transition: all 0.7s ease; /* إضافة تأثير سلس عند التغيير */
+}
+
+/* تنسيق شعار الموقع */
+.logo img {
+    width: 100%; /* جعل الشعار يتناسب مع العنصر الأب */
+    height: auto; /* الحفاظ على الأبعاد الأصلية */
+}
+
+/* تنسيق روابط التنقل */
+.navlist a {
+    display: inline-block; /* جعل الروابط تظهر بجانب بعضها */
+    font-size: var(--p-font); /* تحديد حجم الخط */
+    font-weight: 500; /* جعل الخط أكثر سماكة */
+    color: var(--other-color); /* تعيين لون النص */
+    margin: 0 25px; /* إضافة تباعد بين الروابط */
+    transition: all 0.7s ease; /* إضافة تأثير عند التحويل */
+}
+
+/* تغيير لون الرابط عند التمرير عليه */
+.navlist a:hover {
+    color: var(--bg-color); /* تغيير اللون عند التمرير */
+}
+
+/* تنسيق أيقونة القائمة (للأجهزة الصغيرة) */
+#menu-icon {
+    font-size: 40px; /* تحديد حجم الأيقونة */
+    z-index: 10001; /* تحديد الأولوية في الطبقات */
+    color: var(--bg-color); /* تحديد لون الأيقونة */
+    cursor: pointer; /* تغيير شكل المؤشر عند التمرير */
+    display: none; /* إخفاؤها في الوضع الافتراضي */
+}
+
+/* نهاية تنسيق الهيدر */
+
+
+
+
+
+/* بداية قسم الصفحة الرئيسية */
+
+/* ضبط المسافات الداخلية لكل الأقسام */
+section {
+    padding: 90px 15% 80px; /* تحديد التباعد العلوي والجانبي والسفلي */
+}
+
+/* تصميم قسم الصفحة الرئيسية */
+.home {
+    position: relative; /* تحديد الموضع النسبي */
+    height: 100vh; /* جعله يغطي الشاشة بالكامل */
+    width: 100%; /* جعله يمتد على عرض الصفحة */
+    display: flex; /* استخدام flexbox لترتيب العناصر */
+    align-items: center; /* محاذاة العناصر عموديًا */
+    justify-content: flex-start; /* محاذاة العناصر إلى البداية */
+    background-image: url(../img/bg1.png); /* تعيين صورة الخلفية الافتراضية */
+    background-size: cover; /* ضبط الصورة لتغطية الخلفية بالكامل */
+    background-position: center; /* توسيط الصورة */
+    animation: slide 25s infinite; /* تطبيق تأثير تغيير الخلفية */
+}
+
+/* تعريف تحريك تغيير الخلفيات */
+@keyframes slide {
+    0% {
+        background-image: url(../img/bg2.png);
+    }
+    25% {
+        background-image: url(../img/bg3.png);
+    }
+    50% {
+        background-image: url(../img/bg4.png);
+    }
+    50% {
+        background-image: url(../img/bg1.png);
+    }
+    75% {
+        background-image: url(../img/bg5.png);
+    }
+    100% {
+        background-image: url(../img/bg1.png);
+    }
+}
+
+/* تنسيق عنوان الصفحة الرئيسية */
+.home-text h1 {
+    font-size: var(--h1-font); /* استخدام الحجم المحدد في :root */
+    font-weight: 800; /* جعل الخط أكثر سماكة */
+    color: var(--bg-color); /* تحديد لون النص */
+}
+
+/* تنسيق الفقرة داخل الصفحة الرئيسية */
+.home-text p {
+    font-size: var(--p-font); /* استخدام حجم الخط المحدد */
+    font-weight: 500; /* تحديد سماكة الخط */
+    color: var(--other-color); /* تعيين لون النص */
+    line-height: 32px; /* ضبط المسافة بين الأسطر */
+    margin-bottom: 35px; /* إضافة تباعد أسفل الفقرة */
+}
+
+/* تصميم الأزرار العامة */
+.btn {
+    display: inline-block; /* جعلها تظهر بجانب بعضها */
+    padding: 15px 30px; /* تحديد التباعد الداخلي */
+    font-size: var(--p-font); /* استخدام حجم النص المحدد */
+    font-weight: 500; /* جعل الخط متوسط السماكة */
+    color: var(--bg-color); /* لون النص */
+    background: var(--main-color); /* لون الخلفية */
+    border-radius: 30px; /* جعل الحواف مستديرة */
+    margin-right: 20px; /* إضافة تباعد بين الأزرار */
+    transition: all 0.7s ease; /* تأثير التحويل عند التغيير */
+}
+
+/* تغيير لون الزر عند التمرير */
+.btn:hover {
+    background: #c93232; /* تغيير لون الخلفية */
+}
+
+/* تصميم الزر الثانوي */
+.btn-second {
+    display: inline-block;
+    padding: 14px 30px;
+    background: transparent; /* جعل الخلفية شفافة */
+    border: 2px solid var(--main-color); /* تعيين لون الإطار */
+    color: var(--bg-color); /* تعيين لون النص */
+    font-size: var(--p-font);
+    font-weight: 500;
+    border-radius: 30px;
+    transition: all 0.7s ease;
+}
+
+/* تغيير الزر الثانوي عند التمرير */
+.btn-second:hover {
+    background: var(--main-color); /* تغيير لون الخلفية */
+    border: 2px solid var(--main-color); /* الحفاظ على الإطار */
+}
+
+/* تصميم الصورة داخل القسم */
+.h-img img {
+    width: 100px; /* تحديد العرض */
+    height: 100px; /* تحديد الارتفاع */
+    max-width: 100%; /* جعل الصورة تتناسب مع العنصر الأب */
+    object-fit: contain; /* ضبط حجم الصورة داخل العنصر */
+    border-radius: 50%; /* جعل الصورة دائرية */
+}
+
+/* تصميم حاوية الصورة */
+.h-img {
+    overflow: hidden; /* إخفاء الأجزاء الزائدة */
+    width: 100px;
+    height: 100px;
+    margin: 0 auto; /* توسيط العنصر */
+    margin-bottom: 20px; /* إضافة تباعد أسفل العنصر */
+    border-radius: 50%;
+    cursor: pointer; /* تغيير المؤشر عند التمرير */
+}
+
+/* ضبط التأثير عند تمرير الماوس فوق الصورة */
+.h-img img {
+    width: 100%;
+    display: block;
+    transition: transform 0.7s; /* إضافة تأثير الحركة */
+}
+
+/* تكبير الصورة عند تمرير الماوس */
+.h-img img:hover {
+    transform: scale(1.2);
+}
+
+/* تصميم حاوية النصوص والصور */
+.home-contain {
+    margin-top: 3.5rem;
+    display: flex; /* استخدام flexbox */
+    flex-wrap: wrap; /* السماح بتوزيع العناصر عند تصغير الشاشة */
+    align-items: center; /* محاذاة العناصر عموديًا */
+    justify-content: center; /* توسيط العناصر أفقيًا */
+    gap: 7rem; /* إضافة تباعد بين العناصر */
+}
+
+/* تصميم الصف داخل القسم */
+.h-row {
+    text-align: center; /* توسيط النصوص */
+}
+
+/* تنسيق النصوص داخل الصف */
+.h-row h6 {
+    font-size: 15px;
+    color: var(--bg-color);
+    font-weight: 500;
+}
+
+/* تصميم أيقونة السهم */
+.arrow {
+    position: absolute; /* تحديد الموضع المطلق */
+    top: 35%; /* تحريكه إلى الأسفل */
+    right: 30%; /* تحريكه إلى اليمين */
+}
+
+/* تصميم أيقونة السهم */
+.arrow i {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 90px; /* تحديد ارتفاع العنصر */
+    width: 90px; /* تحديد عرض العنصر */
+    background: var(--bg-color); /* تعيين لون الخلفية */
+    color: var(--text-color); /* تحديد لون الأيقونة */
+    border-radius: 50%; /* جعله دائري الشكل */
+    font-size: 35px; /* تحديد حجم الأيقونة */
+    transition: all 0.7s ease; /* إضافة تأثير عند التحويل */
+}
+
+/* تغيير لون أيقونة السهم عند التمرير */
+.arrow i:hover {
+    background: var(--main-color);
+    color: var(--bg-color);
+    transform: scale(0.9); /* تقليل الحجم قليلاً */
+}
+
+/* شريط التنقل عند التمرير (وضعية sticky) */
+header.sticky {
+    background: var(--text-color); /* تغيير لون الخلفية عند التمرير */
+    padding: 20px 15%; /* تقليل التباعد */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.08); /* إضافة ظل */
+}
+
+/* نهاية قسم الصفحة الرئيسية */
+
+
+
+
+
+/* بداية قسم الوجهات */
+
+/* تصميم الحاوية الوسطى */
+.middle-content {
+    display: flex; /* استخدام flexbox لترتيب العناصر */
+    flex-wrap: wrap; /* السماح بتوزيع العناصر عند تصغير الشاشة */
+    align-items: center; /* محاذاة العناصر عموديًا */
+    justify-content: space-between; /* توزيع العناصر بالتساوي */
+    gap: 2rem; /* إضافة مسافة بين العناصر */
+}
+
+/* تنسيق العنوان الرئيسي للقسم */
+.mid-left h1 {
+    font-size: var(--h2-font); /* استخدام الحجم المحدد */
+    font-weight: 700; /* جعل الخط عريض */
+}
+
+/* تنسيق العنوان الفرعي */
+.mid-left h6 {
+    font-size: 25px; /* تحديد حجم الخط */
+    font-weight: 600; /* جعل الخط متوسط السماكة */
+    color: var(--main-color); /* تعيين لون النص */
+}
+
+/* تصميم الحاوية اليمنى */
+.mid-right {
+    display: flex; /* استخدام flexbox */
+    align-items: center; /* محاذاة العناصر عموديًا */
+    gap: 2rem; /* إضافة تباعد بين العناصر */
+}
+
+/* تصميم الأيقونات داخل الحاوية اليمنى */
+.mid-right i {
+    display: inline-flex; /* جعل الأيقونة في خط واحد مع النص */
+    align-items: center; /* محاذاة العناصر عموديًا */
+    justify-content: center; /* توسيط المحتوى داخل العنصر */
+    height: 60px; /* تحديد الارتفاع */
+    width: 60px; /* تحديد العرض */
+    color: var(--text-color); /* لون الأيقونة */
+    background: transparent; /* جعل الخلفية شفافة */
+    border: 1px solid var(--main-color); /* تحديد لون الإطار */
+    border-radius: 50%; /* جعل الأيقونة دائرية */
+    font-size: 20px; /* تحديد حجم الأيقونة */
+    transition: all 0.7s ease; /* إضافة تأثير عند التحويل */
+}
+
+/* تغيير لون الأيقونات عند تمرير الماوس */
+.mid-right i:hover {
+    background: var(--main-color); /* تغيير لون الخلفية */
+    color: var(--bg-color); /* تغيير لون النص */
+    border: 1px solid var(--main-color); /* إبقاء الإطار بنفس اللون */
+}
+
+/* تصميم محتوى الوجهات */
+.destination-content {
+    display: grid; /* استخدام نظام الشبكة */
+    grid-template-columns: repeat(auto-fit, minmax(300px, auto)); /* توزيع العناصر تلقائيًا */
+    gap: 2rem; /* إضافة تباعد بين العناصر */
+    display: flex; /* تحويل التخطيط إلى flexbox */
+    margin-top: 4rem; /* إضافة تباعد علوي */
+}
+
+/* تصميم الصف الخاص بكل وجهة */
+.row {
+    transition: all 0.7s ease; /* إضافة تأثير عند التحويل */
+}
+
+/* تصميم حاوية الصورة */
+.row-img {
+    position: relative; /* تعيين الموضع النسبي */
+    display: inline-block; /* عرض العنصر ككتلة ضمنية */
+    transition: all 0.5s; /* إضافة تأثير سلس */
+}
+
+/* ضبط الصور داخل الوجهات */
+.row-img img {
+    width: 100%; /* جعل الصورة تمتد بعرض العنصر الأب */
+    height: auto; /* الحفاظ على نسبة الأبعاد */
+    display: block; /* إزالة الفراغات الإضافية */
+    border-radius: 10%; /* جعل حواف الصورة مستديرة */
+}
+
+/* تصميم الطبقة الشفافة (Overlay) عند التمرير */
+.overlay {
+    position: absolute; /* تحديد الموضع المطلق */
+    top: 0; /* جعله يغطي العنصر بالكامل */
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* تعيين لون خلفية شبه شفافة */
+    display: flex; /* استخدام flexbox لتوسيط النص */
+    justify-content: center; /* توسيط المحتوى أفقيًا */
+    align-items: center; /* توسيط المحتوى عموديًا */
+    color: #fff; /* تعيين لون النص */
+    font-size: 20px; /* حجم النص */
+    font-weight: bold; /* جعل النص غامقًا */
+    text-align: center; /* توسيط النص */
+    border-radius: 10%; /* جعل الحواف مستديرة */
+    opacity: 0; /* إخفاء العنصر في الوضع العادي */
+    transition: opacity 0.3s ease-in-out; /* تأثير الانتقال */
+}
+
+/* إظهار الطبقة الشفافة عند تمرير الماوس */
+.row-img:hover .overlay {
+    opacity: 1;
+    border-radius: 10%;
+}
+
+/* تصميم تقييم الوجهة (نجوم التقييم) */
+.star {
+    position: absolute; /* تحديد الموضع المطلق */
+    top: 5%; /* إبعاده عن الحافة العلوية */
+    right: 8%; /* إبعاده عن الحافة اليمنى */
+    display: flex; /* استخدام flexbox لمحاذاة العناصر */
+    align-items: center; /* توسيط العناصر */
+    padding: 4px 8px; /* إضافة تباعد داخلي */
+    background: var(--bg-color); /* تحديد لون الخلفية */
+    font-size: 15px; /* تعيين حجم النص */
+    border-radius: 10%; /* جعل الحواف مستديرة */
+}
+
+/* تصميم أيقونة النجمة */
+.star i {
+    color: gold; /* تعيين اللون الذهبي للنجمة */
+    font-size: 21px; /* تحديد حجم الأيقونة */
+}
+
+/* تصميم رابط التقييم */
+.star a {
+    font-size: var(--p-font); /* استخدام حجم الخط العام */
+    font-weight: 600; /* جعل الخط متوسط السماكة */
+    color: var(--text-color); /* تحديد لون النص */
+}
+
+/* تأثير عند تمرير الماوس على العنصر */
+.row:hover {
+    transform: scale(1.1) translateY(-5px); /* تكبير العنصر وتحريكه للأعلى */
+    cursor: pointer; /* تغيير المؤشر عند التمرير */
+}
+
+/* نهاية قسم الوجهات */
+
+
+
+
+
+/* بداية قسم من نحن */
+
+/* تصميم الحاوية الرئيسية للقسم */
+.about {
+    display: grid; /* استخدام نظام الشبكة لتنسيق العناصر */
+    grid-template-columns: repeat(auto-fit, minmax(300px, auto)); /* جعل العناصر تتكيف مع حجم الشاشة */
+    align-items: center; /* محاذاة العناصر عموديًا */
+    gap: 3rem; /* إضافة تباعد بين العناصر */
+    display: flex; /* التحويل إلى flexbox (هذا قد يلغي تأثير grid) */
+}
+
+/* تنسيق العنوان الرئيسي */
+.about-left h2 {
+    font-size: var(--h2-font); /* تحديد حجم الخط من المتغيرات */
+    font-weight: 700; /* جعل الخط عريض */
+    margin: 15px 0; /* إضافة هامش علوي وسفلي */
+}
+
+/* تنسيق العنوان الفرعي */
+.about-left h6 {
+    font-size: 25px; /* تحديد حجم الخط */
+    font-weight: 600; /* جعل الخط متوسط السماكة */
+    color: var(--main-color); /* تعيين لون النص */
+}
+
+/* تنسيق الفقرة */
+.about-left p {
+    font-size: var(--p-font); /* استخدام حجم الخط المحدد */
+    font-weight: 500; /* جعل النص متوسط السماكة */
+    color: var(--second-color); /* تحديد لون النص */
+    line-height: 32px; /* ضبط ارتفاع السطر */
+    margin-bottom: 35px; /* إضافة هامش سفلي */
+}
+
+/* ضبط حجم الصورة في القسم الأوسط */
+.about-mid img {
+    width: 300px; /* تحديد العرض */
+    height: auto; /* الحفاظ على الأبعاد النسبية للصورة */
+}
+
+/* تصميم الحاوية اليمنى */
+.about-right {
+    display: flex; /* استخدام flexbox */
+    flex-wrap: wrap; /* السماح بتكديس العناصر عند الحاجة */
+    flex-direction: column; /* ترتيب العناصر عموديًا */
+    align-items: flex-start; /* محاذاة العناصر إلى اليسار */
+    gap: 2rem; /* إضافة تباعد بين العناصر */
+}
+
+/* تصميم الصناديق داخل القسم */
+.about-box {
+    display: flex; /* استخدام flexbox لترتيب العناصر أفقيًا */
+    align-items: center; /* محاذاة العناصر عموديًا */
+    gap: 30px; /* إضافة تباعد بين العناصر */
+}
+
+/* تصميم الأيقونات داخل الصناديق */
+.in-img i {
+    background: var(--bg-color); /* تحديد لون الخلفية */
+    border-radius: 100%; /* جعل العنصر دائري الشكل */
+    width: 80px; /* تحديد العرض */
+    height: 80px; /* تحديد الارتفاع */
+    font-size: 40px; /* تحديد حجم الأيقونة */
+    display: flex; /* استخدام flexbox لمحاذاة المحتوى */
+    justify-content: center; /* توسيط الأيقونة أفقيًا */
+    align-items: center; /* توسيط الأيقونة عموديًا */
+    box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.8); /* إضافة ظل للصندوق */
+}
+
+/* تنسيق النص داخل الصناديق */
+.a-text h4 {
+    font-size: 24px; /* تحديد حجم الخط */
+    font-weight: 700; /* جعل الخط عريض */
+    margin-bottom: 8px; /* إضافة هامش سفلي */
+}
+
+/* نهاية قسم من نحن */
+
+
+
+
+
+/* بداية قسم السلايدر الخاص بالأماكن */
+
+/* تصميم الحاوية الرئيسية للسلايدر */
+.slider {
+    width: 70vw; /* تحديد عرض السلايدر ليكون 70% من عرض الشاشة */
+    overflow: auto; /* السماح بالتمرير في حال تجاوز المحتوى الحجم */
+    padding: 20px; /* إضافة تباعد داخلي */
+    box-sizing: border-box; /* التأكد من أن التباعد والحدود لا تؤثر على الحجم الكلي */
+    backdrop-filter: blur(10px); /* إضافة تأثير ضبابي للخلفية */
+    background-color: rgba(0, 0, 0, 0.3); /* تعيين لون خلفية شفاف */
+    border-radius: 20px; /* جعل الحواف دائرية */
+    background-image: url('img/background.jpg'); /* إضافة صورة خلفية */
+    background-size: cover; /* جعل الصورة تغطي العنصر بالكامل */
+    background-position: center; /* محاذاة الخلفية إلى المنتصف */
+    border: 2px solid #fff; /* إضافة حد أبيض حول السلايدر */
+}
+
+/* إخفاء شريط التمرير في متصفح كروم */
+.slider::-webkit-scrollbar {
+    width: 0;
+}
+
+/* تصميم النموذج داخل السلايدر */
+.slider .form {
+    width: max-content; /* جعل العرض يعتمد على المحتوى */
+    --left: 0; /* تعريف متغير CSS للتحكم في التحريك */
+    transform: translateX(var(--left)); /* تحريك العنصر أفقيًا */
+}
+
+/* تنسيق العنوان الرئيسي */
+.title {
+    padding: 20px 0; /* إضافة تباعد علوي وسفلي */
+    color: #fff; /* جعل النص باللون الأبيض */
+    text-shadow: 0 0 10px #0007; /* إضافة ظل للنص */
+    font-weight: 500; /* جعل الخط متوسط السماكة */
+    font-size: large; /* تحديد حجم النص */
+}
+
+/* تصميم أزرار العنوان */
+.title button {
+    border-radius: 20px; /* جعل الأزرار بحواف دائرية */
+    border: none; /* إزالة الحدود */
+    font-family: system-ui; /* استخدام خط النظام */
+}
+
+/* تصميم العناصر داخل السلايدر */
+.slider .form .item {
+    width: 200px; /* تحديد عرض العنصر */
+    height: 300px; /* تحديد ارتفاع العنصر */
+    display: inline-block; /* جعل العنصر يظهر بجانب العناصر الأخرى */
+    margin-right: 20px; /* إضافة تباعد بين العناصر */
+    transform: perspective(10px); /* إضافة تأثير ثلاثي الأبعاد */
+    transform-style: preserve-3d; /* الحفاظ على تأثير العمق */
+}
+
+/* تصميم المحتوى داخل العنصر */
+.slider .form .item .content {
+    width: 100%; /* جعل العنصر يأخذ العرض الكامل */
+    height: 100%; /* جعله يأخذ الارتفاع الكامل */
+    position: relative; /* تحديد الموقع بالنسبة للعنصر الرئيسي */
+    border-radius: 10px; /* جعل الحواف دائرية */
+    overflow: hidden; /* إخفاء أي محتوى زائد */
+    transition: transform .5s; /* إضافة تأثير الانتقال عند التحويل */
+}
+
+/* تصميم الشريط السفلي الذي يحتوي على التقييم */
+.slider .form .item .content .des {
+    position: absolute; /* جعله فوق الصورة */
+    bottom: 0; /* تثبيته في الأسفل */
+    left: 0; /* محاذاته إلى اليسار */
+    width: 100%; /* جعله يمتد على العرض بالكامل */
+    height: 50px; /* تحديد ارتفاعه */
+    backdrop-filter: blur(10px); /* إضافة تأثير ضبابي للخلفية */
+    color: #fff; /* جعل النص باللون الأبيض */
+    font-family: monospace; /* استخدام خط أحادي العرض */
+    display: flex; /* جعل العناصر داخل الشريط تعمل كنظام flexbox */
+    justify-content: space-between; /* توزيع العناصر بالتساوي */
+    align-items: center; /* محاذاة العناصر عموديًا */
+    padding: 10px; /* إضافة تباعد داخلي */
+    box-sizing: border-box; /* الحفاظ على الحجم دون التأثر بالتباعد */
+}
+
+/* تصميم زر التقييم */
+.slider .form .item .content .btn-rate {
+    background-color: #eee; /* تعيين لون الخلفية */
+    border: none; /* إزالة الحدود */
+    border-radius: 10px; /* جعل الزر بحواف دائرية */
+    font-size: 12px; /* تحديد حجم النص */
+    padding: 5px 10px; /* إضافة تباعد داخلي */
+    font-weight: bold; /* جعل النص عريض */
+    cursor: pointer; /* تغيير المؤشر عند التمرير */
+    transition: all 0.3s ease; /* إضافة تأثير عند التحويل */
+}
+
+/* تأثير التحويل عند تمرير الماوس */
+.slider .form .item .content .btn-rate:hover {
+    background-color: #ddd; /* تغيير لون الخلفية عند التمرير */
+    transform: scale(1.1); /* تكبير الزر قليلاً */
+}
+
+/* تأثيرات على العناصر داخل السلايدر عند التحريك لليسار */
+.slider .form.left .item .content {
+    transform: rotateY(-1deg) scale(0.8);
+}
+
+/* تأثيرات على العناصر داخل السلايدر عند التحريك لليمين */
+.slider .form.right .item .content {
+    transform: rotateY(1deg) scale(0.8);
+}
+
+/* تصميم الصور داخل العناصر */
+.slider .form .item img {
+    width: 100%; /* جعل الصورة تمتد على كامل العرض */
+    height: 100%; /* جعلها تمتد على كامل الارتفاع */
+    object-fit: cover; /* ضبط حجم الصورة بحيث تغطي العنصر بالكامل */
+}
+
+/* تصميم زر العلامة التجارية */
+.btn-brand {
+    font-size: 16px; /* تحديد حجم الخط */
+    font-weight: bold; /* جعل النص عريض */
+    color: #fff; /* جعل اللون أبيض */
+    background: none; /* إزالة الخلفية */
+    border: none; /* إزالة الحدود */
+    cursor: pointer; /* تغيير المؤشر عند التمرير */
+    padding: 8px 16px; /* إضافة تباعد داخلي */
+    transition: color 0.3s ease-in-out; /* إضافة تأثير عند تغيير اللون */
+}
+
+/* تأثير التحويل عند تمرير الماوس */
+.btn-brand:hover {
+    color: #ef4444; /* تغيير لون النص عند التمرير */
+}
+
+/* تصميم العنوان الرئيسي */
+.title-head h1 {
+    font-size: var(--h2-font); /* تحديد حجم النص */
+    font-weight: 700; /* جعل النص عريض */
+}
+
+/* تصميم العنوان الفرعي */
+.title-head h6 {
+    font-size: 25px; /* تحديد حجم النص */
+    font-weight: 600; /* جعل النص متوسط السماكة */
+    color: var(--main-color); /* تعيين اللون الأساسي */
+}
+
+/* نهاية قسم السلايدر الخاص بالأماكن */
+
+
+
+
+
+
+/*  تصميم النافذة المنبثقة للتقييمات */
+.modal {
+    display: none; /* إخفاء النافذة افتراضيًا */
+    position: fixed; /* جعلها ثابتة لتظهر فوق جميع العناصر */
+    z-index: 1; /* وضعها في طبقة علوية */
+    left: 0;
+    top: 0;
+    width: 100%; /* جعلها تمتد على عرض الشاشة بالكامل */
+    height: 100%; /* جعلها تغطي الشاشة بالكامل */
+    background-color: rgba(0, 0, 0, 0.5); /* إضافة لون خلفية شفاف لتمييز النافذة */
+    display: flex;
+    justify-content: center; /* محاذاة النافذة أفقيًا في المنتصف */
+    align-items: center; /* محاذاة النافذة عموديًا في المنتصف */
+}
+
+/* تصميم المحتوى داخل النافذة المنبثقة */
+.modal-content {
+    background: white; /* جعل الخلفية بيضاء */
+    padding: 20px; /* إضافة تباعد داخلي */
+    border-radius: 8px; /* جعل الحواف دائرية */
+    width: 300px; /* تحديد عرض النافذة */
+    text-align: center; /* محاذاة النص إلى المنتصف */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* إضافة ظل لتوضيح بروز العنصر */
+}
+
+/* تصميم زر الإغلاق */
+.close {
+    float: right; /* وضع الزر في أقصى اليمين */
+    font-size: 24px; /* تحديد حجم الزر */
+    cursor: pointer; /* تغيير المؤشر عند التمرير فوق الزر */
+}
+
+.close:hover {
+    color: red; /* تغيير لون الزر إلى الأحمر عند التمرير */
+}
+
+/* تصميم نظام التقييم بالنجوم */
+.rating {
+    display: flex; /* استخدام flexbox لتوزيع العناصر */
+    justify-content: center; /* محاذاة النجوم إلى المنتصف */
+    align-items: center;
+    flex-direction: row-reverse; /* عكس اتجاه النجوم ليبدأ التقييم من اليمين إلى اليسار */
+    gap: 5px; /* إضافة مسافة بين النجوم */
+    margin: 15px 0; /* إضافة مسافة علوية وسفلية */
+}
+
+/* إخفاء حقول الإدخال الخاصة بالتقييم */
+.rating:not(:checked)>input {
+    position: absolute;
+    appearance: none; /* إخفاء المظهر الافتراضي لعنصر الإدخال */
+}
+
+/* تصميم شكل النجوم */
+.rating:not(:checked)>label {
+    float: right; /* جعل النجوم في اتجاه اليمين */
+    cursor: pointer; /* تغيير المؤشر عند التمرير */
+    font-size: 30px; /* تحديد حجم النجمة */
+    color: #666; /* جعل لون النجوم غير المفعلة رمادي */
+}
+
+/* إضافة نجمة لكل تصنيف */
+.rating:not(:checked)>label:before {
+    content: '★'; /* وضع رمز النجمة */
+}
+
+/* تأثير عند تحديد النجمة */
+.rating>input:checked+label:hover,
+.rating>input:checked+label:hover~label,
+.rating>input:checked~label:hover,
+.rating>input:checked~label:hover~label,
+.rating>label:hover~input:checked~label {
+    color: #e58e09; /* تغيير لون النجوم عند التمرير */
+}
+
+/* تأثير عند تمرير الماوس فوق النجوم */
+.rating:not(:checked)>label:hover,
+.rating:not(:checked)>label:hover~label {
+    color: #ff9e0b; /* تغيير لون النجوم عند التمرير */
+}
+
+/* لون النجوم عند تحديدها */
+.rating>input:checked~label {
+    color: #ffa723;
+}
+
+/* تصميم حقل النص لكتابة التقييم */
+textarea {
+    width: 100%; /* جعله يمتد على عرض النافذة */
+    height: 80px; /* تحديد الارتفاع */
+    margin-top: 10px; /* إضافة تباعد علوي */
+    padding: 10px; /* إضافة تباعد داخلي */
+    border: 1px solid #ddd; /* تحديد لون الحدود */
+    border-radius: 5px; /* جعل الحواف دائرية */
+    resize: none; /* منع تغيير حجم الحقل */
+}
+
+/* تأثير عند النقر على حقل التقييم */
+textarea:focus {
+    outline: none; /* إزالة التحديد الأزرق الافتراضي */
+    border-color: #ff9800; /* تغيير لون الحدود عند التركيز */
+}
+
+/* تصميم زر إرسال التقييم */
+#submitReview {
+    width: 100%; /* جعله يمتد على عرض النافذة */
+    margin-top: 10px; /* إضافة تباعد علوي */
+}
+
+
+
+
+
+/* النوافذ المنبثقة للبيانات */
+.modal { 
+    display: none; /* إخفاء النافذة المنبثقة افتراضيًا */
+    position: fixed; /* تثبيت النافذة في مكانها عند التمرير */
+    z-index: 1; /* تحديد مستوى الطبقة فوق باقي العناصر */
+    left: 0; /* محاذاة النافذة إلى أقصى اليسار */
+    top: 0; /* محاذاة النافذة إلى أعلى الصفحة */
+    width: 100%; /* جعل النافذة تمتد على عرض الصفحة بالكامل */
+    height: 100%; /* جعل النافذة تمتد على ارتفاع الصفحة بالكامل */
+    background-color: rgba(0, 0, 0, 0.5); /* تعتيم الخلفية عند ظهور النافذة */
+    display: flex; /* استخدام Flexbox لمركزتها */
+    justify-content: center; /* محاذاة العناصر أفقيًا في المنتصف */
+    align-items: center; /* محاذاة العناصر عموديًا في المنتصف */
+}
+
+.modal-content {
+    background: white; /* لون خلفية محتوى النافذة */
+    padding: 20px; /* إضافة هوامش داخلية */
+    border-radius: 8px; /* تدوير الحواف */
+    width: 300px; /* تحديد العرض */
+    text-align: center; /* محاذاة النص في المنتصف */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* إضافة ظل خفيف حول النافذة */
+}
+
+/* زر الإغلاق */
+.close {
+    float: right; /* محاذاة الزر إلى اليمين */
+    font-size: 24px; /* حجم الخط */
+    cursor: pointer; /* تغيير المؤشر إلى شكل اليد عند التحويم */
+}
+
+.close:hover {
+    color: red; /* تغيير لون الزر عند التحويم */
+}
+
+/* أزرار الموقع والاتصال */
+.location-btn, .call-btn {
+    background-color: #4CAF50; /* تحديد اللون الأخضر كخلفية للزر */
+    color: white; /* لون النص */
+    padding: 10px 15px; /* تحديد الهوامش الداخلية */
+    border: none; /* إزالة الحدود */
+    cursor: pointer; /* تغيير المؤشر عند التحويم */
+    margin-top: 10px; /* إضافة مسافة أعلى الزر */
+    width: 100%; /* جعل الأزرار تمتد بعرض الحاوية */
+    display: block; /* جعل الأزرار تظهر كبلوك وليس inline */
+    border-radius: 5px; /* تدوير الحواف */
+}
+
+.call-btn {
+    background-color: #f44336; /* تحديد اللون الأحمر لزر الاتصال */
+}
+
+.location-btn:hover {
+    background-color: #45a049; /* تغيير لون زر الموقع عند التحويم */
+}
+
+.call-btn:hover {
+    background-color: #d32f2f; /* تغيير لون زر الاتصال عند التحويم */
+}
+
+
+
+
+
+footer {
+    background-color: rgb(0, 0, 8); /* تحديد لون خلفية التذييل ليكون قريبًا من الأسود */
+    color: #fff; /* تحديد لون النص ليكون أبيض */
+    text-align: center; /* محاذاة النص في المنتصف */
+    padding: 15px 0; /* إضافة هوامش داخلية (15 بكسل أعلى وأسفل، 0 على الجانبين) */
+}
+
+
+
+
+/* الأجهزة اللوحية (أقل من 1200px) */
+@media (max-width: 1200px) {
+    .navlist {
+        display: none; /* إخفاء القائمة افتراضيًا */
+        position: absolute; /* تحديد موقعها بشكل مطلق */
+        top: 60px; /* وضعها تحت الهيدر */
+        left: 0; /* محاذاتها إلى اليسار */
+        width: 100%; /* جعلها تمتد على عرض الشاشة */
+        background: rgba(0, 0, 0, 0.9); /* جعل الخلفية شبه شفافة */
+        flex-direction: column; /* ترتيب العناصر عموديًا */
+        align-items: center; /* محاذاة العناصر في المنتصف */
+        gap: 15px; /* إضافة مسافة بين العناصر */
+        padding: 15px 0; /* إضافة تباعد داخلي */
+    }
+
+    .navlist.active {
+        display: flex; /* إظهار القائمة عند تفعيل كلاس active */
+    }
+
+    .navlist a {
+        color: white; /* تغيير لون الروابط إلى الأبيض */
+        font-size: 18px; /* تحديد حجم الخط */
+        text-decoration: none; /* إزالة التسطير */
+        display: block; /* جعل الروابط تأخذ كامل العرض */
+        padding: 10px; /* إضافة تباعد داخلي */
+    }
+
+    #menu-icon {
+        display: block; /* إظهار أيقونة القائمة */
+        font-size: 24px; /* تكبير حجم الأيقونة */
+        color: white; /* تغيير لون الأيقونة إلى الأبيض */
+        cursor: pointer; /* تغيير المؤشر إلى اليد عند التحويم */
+        user-select: none; /* منع تحديد الأيقونة */
+        z-index: 1100; /* جعلها فوق جميع العناصر */
+        position: relative; /* تحديد موضعها */
+    }
+
+    .destination-content {
+        flex-direction: column; /* ترتيب العناصر بشكل عمودي */
+        align-items: center; /* محاذاة العناصر في المنتصف */
+    }
+
+    .about {
+        flex-direction: column; /* ترتيب النص بشكل عمودي */
+        text-align: center; /* محاذاة النص في المنتصف */
+    }
+
+    .arrow {
+        display: none; /* إخفاء السهم في الشاشات الصغيرة */
+    }
+}
+
+/* الأجهزة المحمولة (أقل من 768px) */
+@media (max-width: 768px) {
+    header {
+        display: flex; /* جعل الهيدر مرنًا */
+        justify-content: space-between; /* توزيع العناصر في الهيدر */
+        align-items: center; /* محاذاة العناصر في المنتصف */
+        padding: 22px; /* إضافة تباعد داخلي */
+        background: rgba(0, 0, 0, 0.9); /* تغيير الخلفية إلى لون داكن */
+        position: fixed; /* تثبيت الهيدر أعلى الصفحة */
+        width: 100%; /* جعله يغطي عرض الشاشة */
+        top: 0; /* تثبيته في الأعلى */
+        left: 0; /* محاذاته إلى اليسار */
+        z-index: 1000; /* جعله فوق باقي العناصر */
+    }
+
+    .navlist {
+        position: absolute; /* تحديد الموقع المطلق للقائمة */
+        top: 60px; /* وضعها أسفل الهيدر */
+        left: 0; /* محاذاتها إلى اليسار */
+        width: 100%; /* جعلها تمتد على عرض الشاشة */
+        background: rgba(0, 0, 0, 0.9); /* تغيير الخلفية */
+        display: none; /* إخفاء القائمة افتراضيًا */
+        flex-direction: column; /* ترتيب العناصر عموديًا */
+        align-items: center; /* محاذاة العناصر في المنتصف */
+        gap: 15px; /* إضافة مسافة بين العناصر */
+        padding: 15px 0; /* إضافة تباعد داخلي */
+    }
+
+    .navlist.active {
+        display: flex; /* إظهار القائمة عند تفعيلها */
+    }
+
+    .navlist a {
+        color: white; /* تغيير لون الروابط إلى الأبيض */
+        font-size: 18px; /* تكبير حجم الخط */
+        text-decoration: none; /* إزالة التسطير */
+        display: block; /* جعل الروابط تأخذ كامل العرض */
+        padding: 10px; /* إضافة تباعد داخلي */
+    }
+
+    #menu-icon {
+        display: block; /* إظهار زر القائمة */
+        font-size: 24px; /* تكبير الأيقونة */
+        color: white; /* تغيير اللون إلى الأبيض */
+        cursor: pointer; /* تغيير المؤشر عند التحويم */
+        user-select: none; /* منع التحديد */
+        z-index: 1100; /* جعله فوق باقي العناصر */
+        position: relative; /* تحديد موضعه */
+    }
+
+    .home {
+        margin-top: 80px; /* إضافة هامش علوي لتجنب التداخل مع الهيدر */
+        text-align: center; /* توسيط النص */
+        padding: 20px; /* إضافة تباعد داخلي */
+    }
+
+    .home-contain {
+        display: flex; /* استخدام الفليكس بوكس */
+        flex-wrap: wrap; /* السماح للعناصر بالانتقال إلى سطر جديد */
+        justify-content: center; /* توسيط المحتوى */
+        gap: 10px; /* إضافة مسافة بين العناصر */
+    }
+
+    .h-row {
+        width: 30%; /* تحديد عرض العنصر */
+        text-align: center; /* توسيط النص */
+    }
+
+    .h-row img {
+        width: 100%; /* جعل الصور تمتد لكامل عرض العنصر */
+        height: auto; /* الحفاظ على الأبعاد الأصلية */
+        border-radius: 10px; /* تقريب الحواف */
+    }
+
+    .h-row h6 {
+        display: none; /* إخفاء النصوص */
+    }
+
+    .home-btn {
+        display: flex; /* استخدام الفليكس بوكس */
+        flex-direction: row; /* ترتيب الأزرار بجانب بعض */
+        justify-content: center; /* توسيط الأزرار */
+        gap: 5px; /* إضافة مسافة بين الأزرار */
+    }
+
+    .home-btn .btn,
+    .home-btn .btn-second {
+        display: inline-block; /* جعل الأزرار كعناصر بلوك */
+        width: 150px; /* تحديد العرض */
+        padding: 10px; /* إضافة تباعد داخلي */
+        font-size: 16px; /* تكبير حجم الخط */
+        text-align: center; /* توسيط النص */
+        border-radius: 5px; /* تقريب الحواف */
+    }
+
+    .arrow {
+        display: none; /* إخفاء السهم في الشاشات الصغيرة */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
